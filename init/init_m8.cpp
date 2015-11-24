@@ -1,6 +1,5 @@
 /*
    Copyright (c) 2013, The Linux Foundation. All rights reserved.
-
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -13,7 +12,6 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
-
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -84,7 +82,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "m8wl");
         property_set("ro.build.fingerprint", "htc/HTCOneM8vzw/htc_m8wl:4.4.4/KTU84P/390638.4:user/release-keys");
         property_set("ro.build.description", "3.28.605.4 CL390638 release-keys");
-        property_set("ro.aokp.device", "htc_m8wl");
+        property_set("ro.product.device", "htc_m8wl");
         property_set("ro.build.product", "htc_m8wl");
         property_set("ro.ril.vzw.feature", "1");
         property_set("ro.ril.oem.ecclist", "911,*911,#911");
@@ -111,7 +109,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "m8whl");
         property_set("ro.build.fingerprint", "htc/sprint_wwe/htc_m8whl:5.0.1/LRX22C/476182.10:user/release-keys");
         property_set("ro.build.description", "4.20.651.10 CL476182 release-keys");
-        property_set("ro.aokp.device", "htc_m8whl");
+        property_set("ro.product.device", "htc_m8whl");
         property_set("ro.build.product", "htc_m8whl");
         property_set("telephony.sms.pseudo_multipart", "1");
         property_set("ro.ril.enable.pre_r8fd=1", "1");
@@ -129,11 +127,11 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         common_properties();
         gsm_properties("9");
         property_set("ro.product.model", "m8");
-        property_set("ro.build.fingerprint", "htc/m8_google/htc_m8:5.1/LMY47O.H4/519376:user/release-keys");
-        property_set("ro.build.description", "4.04.1700.4 CL519376 release-keys");
-        property_set("ro.aokp.device", "htc_m8");
+        property_set("ro.build.fingerprint", "htc/m8_google/htc_m8:6.0/MRA58K.H6/648564:user/release-keys");
+        property_set("ro.build.description", "5.07.1700.6 CL648564 release-keys");
+        property_set("ro.product.device", "htc_m8");
     }
 
-    property_get("ro.aokp.device", device);
+    property_get("ro.product.device", device);
     ERROR("Found bootmid %s setting build properties for %s device\n", bootmid, device);
 }
