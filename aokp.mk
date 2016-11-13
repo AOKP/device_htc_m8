@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2016 AOKP / The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,12 +14,18 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/htc/m8/full_m8.mk)
-
-# Enhanced NFC
-$(call inherit-product, vendor/aokp/configs/nfc_enhanced.mk)
+# Inherit from m8 device
+$(call inherit-product, device/htc/m8/device.mk)
 
 # Inherit some common AOKP stuff.
 $(call inherit-product, vendor/aokp/configs/common_full_phone.mk)
 
+# Enhanced NFC
+$(call inherit-product, vendor/aokp/configs/nfc_enhanced.mk)
+
+# Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aokp_m8
+PRODUCT_DEVICE := m8
+PRODUCT_BRAND := htc
+PRODUCT_MANUFACTURER := htc
+PRODUCT_MODEL := One M8
